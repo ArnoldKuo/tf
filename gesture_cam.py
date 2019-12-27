@@ -34,7 +34,7 @@ while True:
 
     res = cv2.resize(roi_gray, (96, 96), interpolation = cv2.INTER_CUBIC)
     x_data = res / 255.0
-    x_data = x_data.reshape(1,96,96,1)
+    x_data = x_data.reshape(1,96,96,3)
 
     # prediction
     predictions = model.predict(x_data)
